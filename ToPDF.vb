@@ -14,8 +14,9 @@ Imports System.Runtime.InteropServices
 Imports System.Text
 Imports System.Diagnostics
 
-Module Module1
+Module ToPDFMain
     Sub Main(args() As String)
+        On Error GoTo HandleError
         If args.Length < 3 Then
             Console.WriteLine("Usage: ToPDF.exe <appType (PP,XL,WD)> <source> <destination> <options>")
             Console.WriteLine("See documentation for further details.")
@@ -43,6 +44,17 @@ Module Module1
                 Console.WriteLine("Usage: ToPDF.exe <appType (PP,XL,WD)> <source> <destination> <options>")
                 Console.WriteLine("See documentation for further details.")
         End Select
+        Exit Sub
+
+HandleError:
+        Dim e As Object = Err.GetException()
+        If (TypeOf e Is System.NullReferenceException) Then
+            Console.WriteLine("ERR: Invalid path specified.")
+        ElseIf TypeOf e Is System.Runtime.InteropServices.COMException Then
+            Console.WriteLine("COMException: " & e.Message)
+        Else
+            Console.WriteLine(Err.Description & "[" & Err.HelpContext & "@" & Err.Erl & "]")
+        End If
     End Sub
 End Module
 Class PowerPointExporter
