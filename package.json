@@ -1,14 +1,14 @@
 {
   "name": "mso-pdf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uses interop to convert Word, PowerPoint and Excel documents to a PDF for previewing using PDF.js",
   "main": "mso-pdf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
-	"url": "" 
-  }
+    "url": "https://github.com/sancarn/mso-pdf"
+  },
   "keywords": [
     "mso",
     "microsoft",
