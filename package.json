@@ -1,0 +1,19 @@
+{
+  "name": "topdf",
+  "version": "1.0.0",
+  "description": "Uses interop to convert Word, PowerPoint and Excel documents to a PDF for previewing using PDF.js",
+  "main": "topdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "to",
+    "pdf",
+    "excel",
+    "word",
+    "powerpoint",
+    "preview"
+  ],
+  "author": "Sancarn",
+  "license": "MIT"
+}
