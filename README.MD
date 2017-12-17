@@ -1,4 +1,4 @@
-# ToPDF
+# MSO-PDF
 
 This is likely extremely poorly written, but as is life
 
